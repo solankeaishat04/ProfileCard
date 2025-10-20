@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me - Solanke Aishat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+    <nav class="navbar" data-testid="nav-bar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <main>
+      <article class="profile-card">
+        <div class="card-header">
+          <h2>Contact Me</h2>
+        </div>
+
+        <div class="card-body">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                data-testid="test-contact-name"
+                aria-describedby="error-name"
+              />
+              <small id="error-name" class="error" data-testid="test-contact-error-name"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                data-testid="test-contact-email"
+                aria-describedby="error-email"
+              />
+              <small id="error-email" class="error" data-testid="test-contact-error-email"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                data-testid="test-contact-subject"
+                aria-describedby="error-subject"
+              />
+              <small id="error-subject" class="error" data-testid="test-contact-error-subject"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                rows="5"
+                data-testid="test-contact-message"
+                aria-describedby="error-message"
+              ></textarea>
+              <small id="error-message" class="error" data-testid="test-contact-error-message"></small>
+            </div>
+
+            <button type="submit" class="btn" data-testid="test-contact-submit">
+              Send Message
+            </button>
+
+            <p id="success" class="success" data-testid="test-contact-success"></p>
+          </form>
+        </div>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
